@@ -1,0 +1,3 @@
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/x64-debug/CMakeFiles/ClientManager.dir
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/x64-debug/CMakeFiles/rebuild_cache.dir

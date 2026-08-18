@@ -1,0 +1,3 @@
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/windows-x64/CMakeFiles/ClientManager.dir
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/windows-x64/CMakeFiles/ALL_BUILD.dir
+C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/windows-x64/CMakeFiles/ZERO_CHECK.dir

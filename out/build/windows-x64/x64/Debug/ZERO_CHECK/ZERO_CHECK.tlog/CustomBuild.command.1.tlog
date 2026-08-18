@@ -1,0 +1,10 @@
+^C:\USERS\YANAS\ONEDRIVE\РАБОЧИЙ СТОЛ\BDPROJ\CLIENTMANAGER\OUT\BUILD\WINDOWS-X64\CMAKEFILES\731439738A216398117E2FC199C3E112\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager" "-BC:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/windows-x64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/yanas/OneDrive/Рабочий стол/BDproj/ClientManager/out/build/windows-x64/ClientManager.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
