@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 void printClients(const std::vector<Client>& clients)
@@ -16,6 +17,7 @@ void printClients(const std::vector<Client>& clients)
     {
         std::cout << "\n";
         std::cout << "ID: " << client.id << "\n";
+
         std::cout << "First name: "
             << client.firstName << "\n";
 
@@ -53,16 +55,17 @@ int main()
             "5432",
             "clients_db",
             "postgres",
-            "2905"
+            "123456"
         );
 
         std::cout << "Creating database tables...\n";
 
         manager.createTables();
 
+        std::cout << "Tables created successfully.\n";
 
-        std::cout << "\n";
-        std::cout << "Adding clients...\n";
+
+        std::cout << "\nAdding clients...\n";
 
         int ivanId = manager.addClient(
             "Ivan",
@@ -76,7 +79,6 @@ int main()
             "anna@example.com"
         );
 
-
         std::cout << "Ivan ID: "
             << ivanId << "\n";
 
@@ -84,8 +86,7 @@ int main()
             << annaId << "\n";
 
 
-        std::cout << "\n";
-        std::cout << "Adding phones...\n";
+        std::cout << "\nAdding phones...\n";
 
         manager.addPhone(
             ivanId,
@@ -102,25 +103,24 @@ int main()
             "+37133333333"
         );
 
+        std::cout << "Phones added successfully.\n";
 
-        std::cout << "\n";
-        std::cout << "Searching Ivan...\n";
+
+        std::cout << "\nSearching for Ivan...\n";
 
         auto clients = manager.findClients("Ivan");
 
         printClients(clients);
 
 
-        std::cout << "\n";
-        std::cout << "Searching by phone...\n";
+        std::cout << "\nSearching by phone...\n";
 
         clients = manager.findClients("+37111111111");
 
         printClients(clients);
 
 
-        std::cout << "\n";
-        std::cout << "Updating Ivan...\n";
+        std::cout << "\nUpdating Ivan...\n";
 
         manager.updateClient(
             ivanId,
@@ -129,9 +129,10 @@ int main()
             "ivan.sidorov@example.com"
         );
 
+        std::cout << "Client updated successfully.\n";
 
-        std::cout << "\n";
-        std::cout << "Searching updated client...\n";
+
+        std::cout << "\nSearching updated client...\n";
 
         clients = manager.findClients(
             "ivan.sidorov@example.com"
@@ -140,39 +141,38 @@ int main()
         printClients(clients);
 
 
-        std::cout << "\n";
-        std::cout << "Deleting one phone...\n";
+        std::cout << "\nDeleting one phone...\n";
 
         manager.deletePhone(
             ivanId,
             "+37111111111"
         );
 
+        std::cout << "Phone deleted successfully.\n";
 
-        std::cout << "\n";
-        std::cout << "Searching Ivan after deleting phone...\n";
+
+        std::cout << "\nSearching Ivan after deleting phone...\n";
 
         clients = manager.findClients("Sidorov");
 
         printClients(clients);
 
 
-        std::cout << "\n";
-        std::cout << "Deleting Anna...\n";
+        std::cout << "\nDeleting Anna...\n";
 
         manager.deleteClient(annaId);
 
+        std::cout << "Client deleted successfully.\n";
 
-        std::cout << "\n";
-        std::cout << "Searching Anna after deletion...\n";
+
+        std::cout << "\nSearching Anna after deletion...\n";
 
         clients = manager.findClients("Anna");
 
         printClients(clients);
 
 
-        std::cout << "\n";
-        std::cout << "Program completed successfully.\n";
+        std::cout << "\nProgram completed successfully.\n";
     }
     catch (const std::exception& e)
     {
